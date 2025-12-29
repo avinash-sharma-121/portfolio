@@ -2,6 +2,7 @@
   "name": "testing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://avinash-sharma-121.github.io/portfolio/",
   "dependencies": {
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
