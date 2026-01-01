@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import StarsCanvas from './components/Stars';
+//import StarsCanvas from './components/Stars';
 
 function App() {
   return (
