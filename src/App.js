@@ -12,7 +12,7 @@ import StarsCanvas from './components/Stars';
 function App() {
   return (
     <div className="App">
-      <StarsCanvas />
+      {/*<StarsCanvas /> */}
       <Header />
       <main className="container">
         <About />
