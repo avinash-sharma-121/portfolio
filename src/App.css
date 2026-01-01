@@ -2,23 +2,144 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #e0e0e0;
   min-height: 100vh;
 }
 
 .App-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 40px;
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   color: white;
-  text-align: center;
-  padding: 3rem 2rem;
   margin: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #3498db;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* About Intro Section */
+.about-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-intro .profile-details h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+.about-intro .profile-details p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #cccccc;
+}
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 1rem;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-list--open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .about-intro {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-intro .profile-details h1 {
+    font-size: 2rem;
+  }
+
+  .about-intro .profile-details p {
+    font-size: 1.2rem;
+  }
 }
 
 /* Image */
@@ -66,6 +187,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 6rem; /* Account for fixed header */
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -82,10 +204,10 @@
 
 section {
   margin-bottom: 0;
-  background-color: white;
+  background-color: #333333;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -98,7 +220,7 @@ h2 {
   border-bottom: 3px solid #3498db;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
-  color: #2c3e50;
+  color: #f0f0f0;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -130,25 +252,25 @@ h2 {
 .project, .experience-item {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background-color: #f8f9fa;
+  background-color: #404040;
   border-radius: 8px;
   border-left: 4px solid #3498db;
 }
 
 .project h3, .experience-item h3 {
   margin: 0 0 0.5rem 0;
-  color: #2c3e50;
+  color: #f0f0f0;
   font-size: 1.3rem;
 }
 
 .project p, .experience-item p {
   margin: 0.25rem 0;
-  color: #555;
+  color: #cccccc;
 }
 
 
 footer {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
   color: white;
   text-align: center;
   padding: 1.5rem;

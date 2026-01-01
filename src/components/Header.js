@@ -1,19 +1,30 @@
-import profileImg from "../Assets/Avinash_Kumar_Sharma.jpg";
+import { useState } from 'react';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header className="App-header">
-            <img
-                src={profileImg}
-                alt="Avinash Kumar Sharma"
-                className="profile-image"
-            />
+            <nav className="nav">
+                <ul className={`nav-list ${isMenuOpen ? 'nav-list--open' : ''}`}>
+                    <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
+                    <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
+                    <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</a></li>
+                    <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
+                    <li><a href="#certificates" onClick={() => setIsMenuOpen(false)}>Certificates</a></li>
+                    <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+                </ul>
+            </nav>
 
-            <div className="profile-details">
-                <h1>Avinash Kumar Sharma</h1>
-                <p>Cloud + DevOps Engineer</p>
-
-            </div>
+            <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+                <span className="hamburger-line"></span>
+            </button>
         </header>
     )
 }
