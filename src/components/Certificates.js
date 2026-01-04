@@ -3,6 +3,10 @@ const Certificates = () => {
         <section id="certificates">
             <h2>Certificates</h2>
             <div className="project">
+                <h3>AZ - 900</h3>
+                <p>I have completed this certificate on July - 2024</p>
+            </div>
+            <div className="project">
                 <h3>AWS Solution Architect</h3>
                 <p>I have completed this certificate on Nov - 2024</p>
             </div>
