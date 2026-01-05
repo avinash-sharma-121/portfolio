@@ -65,8 +65,7 @@ const Projects = () => {
                     Implemented <b>CI/CD using GitHub Actions</b> to automate build and deployment workflows.
                 </p>
                 <p>
-                    Designed the website to effectively showcase professional skills, projects,
-                    and DevOps expertise.
+                    Designed the website to effectively showcase professional skills, projects, and DevOps expertise.
                 </p>
             </div>
 
