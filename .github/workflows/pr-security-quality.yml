@@ -1,0 +1,35 @@
+name: PR Security Quality Checks
+on :
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    security-and-quality:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@4
+              with:
+                fetch-depth: 0 // Fetch all history for all branches and tags (required for sonarcloud scan)
+           
+            - name: Trivy scane
+              uses: aquasecurity/trivy-action@master
+              with:
+                format: 'table'
+                exit-code: '1'
+                serviritys: 'CRITICAL,HIGH'
+                scan-type: 'fs' 
+                scan-ref: .
+                vuln-type: 'os,library'
+            
+            - name: SonarCloud Scan
+              uses: SonarSource/sonarcloud-github-action@master
+              env:
+                SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+              with:
+                args: >
+                  -Dsonar.projectKey=portfolio
+                  -Dsonar.organization=avinash-sharma-121
+                  -Dsonar.qualitygate.wait=true
