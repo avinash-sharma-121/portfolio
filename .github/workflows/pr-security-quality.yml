@@ -15,7 +15,7 @@ jobs:
                 fetch-depth: 0 // Fetch all history for all branches and tags (required for sonarcloud scan)
            
             - name: Trivy scane
-              uses: aquasecurity/trivy-action@master
+              uses: aquasecurity/trivy-action@0.24.0
               with:
                 format: 'table'
                 exit-code: '1'
@@ -25,7 +25,7 @@ jobs:
                 vuln-type: 'os,library'
             
             - name: SonarCloud Scan
-              uses: SonarSource/sonarcloud-github-action@master
+              uses: SonarSource/sonarcloud-github-action@v2
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               with:
