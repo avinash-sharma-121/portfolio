@@ -30,6 +30,7 @@ jobs:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               with:
                 args: >
+                  -Dsonar.scm.revision=${{ github.sha }}
                   -Dsonar.projectKey=portfolio
                   -Dsonar.organization=avinash-sharma-121
                   -Dsonar.qualitygate.wait=true
