@@ -25,12 +25,6 @@ jobs:
                 severity: 'CRITICAL'
                 exit-code: '1'
 
-            - name: Upload Trivy report
-              uses: actions/upload-artifact@v4
-              with:
-                name: trivy-security-report
-                path: trivy-report.txt
-
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@ffc3010689be73b8e5ae0c57ce35968afd7909e8
               env:
