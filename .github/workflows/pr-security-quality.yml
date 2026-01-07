@@ -32,7 +32,7 @@ jobs:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               with:
                 args: >
-                  -Dsonar.projectKey=portfolio
+                  -Dsonar.projectKey=avinash-sharma-121_portfolio
                   -Dsonar.organization=avinash-sharma-121
                   -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
                   -Dsonar.pullrequest.branch=${{ github.head_ref }}
