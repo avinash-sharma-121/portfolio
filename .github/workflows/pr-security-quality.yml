@@ -25,20 +25,12 @@ jobs:
                 severity: 'CRITICAL'
                 exit-code: '1'
 
-            - name: Upload Trivy report
-              uses: actions/upload-artifact@v4
-              with:
-                name: trivy-security-report
-                path: trivy-report.txt
-
-            
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@ffc3010689be73b8e5ae0c57ce35968afd7909e8
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               with:
                 args: >
-                  -Dsonar.scm.revision=${{ github.sha }}
-                  -Dsonar.projectKey=portfolio
+                  -Dsonar.projectKey=avinash-sharma-121_portfolio
                   -Dsonar.organization=avinash-sharma-121
                   -Dsonar.qualitygate.wait=true
