@@ -27,12 +27,12 @@ jobs:
 
 
             - name: SonarCloud Scan
-              uses: SonarSource/sonarcloud-github-action@ffc3010689be73b8e5ae0c57ce35968afd7909e8
+              uses: SonarSource/sonarqube-scan-action@7295e71c9583053f5bf40e9d4068a0c974603ec8 #taken from oficial doc
+              #uses: SonarSource/sonarcloud-github-action@ffc3010689be73b8e5ae0c57ce35968afd7909e8
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
               with:
                 args: >
-                  -Dsonar.scm.revision=${{ github.sha }}
                   -Dsonar.projectKey=portfolio
                   -Dsonar.organization=avinash-sharma-121
                   -Dsonar.qualitygate.wait=true
