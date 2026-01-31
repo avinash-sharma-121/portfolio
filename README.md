@@ -15,7 +15,7 @@ I'm a passionate devops engineer focused on building impactful web applications 
 ### 📂 Projects
 - **CI/CD Pipeline Automation:** Designed and implemented automated CI/CD pipelines using Jenkins and GitLab CI, reducing deployment time by 50%.
 - **Cloud Infrastructure Management:** Managed AWS infrastructure with Terraform, ensuring scalable and secure environments for multiple applications.
-
+- **Worked on terraform** Manage multiple AWS infra resource with teraform, and saving statefile in S3 as an backend service.
 
 ### 📫 Contact
 
