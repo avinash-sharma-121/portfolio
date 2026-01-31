@@ -1,4 +1,5 @@
-import profileImg from "../Assets/Avinash_Kumar_Sharma.jpg";
+//import profileImg from "../Assets/Avinash_Kumar_Sharma.jpg";
+import profileImg from "../Assets/Avinash_Kumar_Sharma_photo.jpeg";
 
 const About = () => {
     return (
