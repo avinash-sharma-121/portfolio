@@ -11,6 +11,7 @@ const About = () => {
                     className="profile-image"
                 />
                 <div className="profile-details">
+                    
                     <h1>Avinash Kumar Sharma</h1>
                     <p>Cloud + DevOps Engineer - 4 Years</p>
                 </div>
