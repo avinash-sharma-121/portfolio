@@ -13,7 +13,7 @@ const About = () => {
                 <div className="profile-details">
 
                     <h1>Avinash Kumar Sharma</h1>
-                    <p>Cloud + DevOps Engineer - 4 Years</p>
+                    <p>Cloud : DevOps Engineer - 4 Years</p>
                     <p><a href="https://drive.google.com/file/d/1LDdFpsqKdiUY6UM1EsUtUbm4-dRF2Hry/view?usp=sharing" target="_blank" style={{ textDecoration: 'none', color: 'inherit' }} rel="noreferrer">Resume</a></p>
                 </div>
             </div>
